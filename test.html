@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест стилей</title>
+    
+    <!-- Шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- СТИЛИ ПРЯМО ЗДЕСЬ -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+        html { height: 100%; }
+        
+        body {
+            font-family: 'PT Sans', Arial, sans-serif;
+            background: linear-gradient(to bottom, #d4f0f5 0%, #ffffff 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 30px 20px;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .info-block {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: transform 0.15s ease;
+            background-color: #fff;
+            border-left: 4px solid #00aeef;
+            margin-bottom: 20px;
+        }
+
+        details[open] summary .chevron,
+        .info-block[open] summary .chevron {
+            transform: rotate(180deg);
+        }
+
+        summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: #0b3d66;
+            user-select: none;
+            border-bottom: 1px solid #edf3f6;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+        summary::marker { display: none; }
+
+        .chevron {
+            width: 16px;
+            height: 16px;
+            color: #0b3d66;
+            transition: transform 0.2s ease;
+        }
+
+        .description {
+            padding: 16px 20px;
+            line-height: 1.6;
+            font-size: 15px;
+            color: #34495e;
+            border-bottom: 1px dashed #e1e8ed;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0077b5;
+            display: block;
+            padding: 12px 20px;
+        }
+        a:hover { background-color: #f7fcfe; padding-left: 26px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <details class="info-block">
+        <summary>
+            Благоустройство территории дома
+            <span class="chevron">▾</span>
+        </summary>
+        <div class="description">Текст описания. При нажатии заголовка он должен развернуться.</div>
+        <a href="#">📄 Скачать документ (.PDF)</a>
+    </details>
+</div>
+
+</body>
+</html>

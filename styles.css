@@ -1,0 +1,406 @@
+/* --- Глобальные настройки --- */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+
+    html {
+    /* Заставляет html занимать весь экран */
+    height: 100%; 
+}
+
+body {
+    font-family: 'PT Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Растягиваем градиент на всю видимую область (Viewport) */
+    background: linear-gradient(to bottom, #d4f0f5 0%, #ffffff 100%);
+    min-height: 100vh; /* Ключевое свойство: блок body будет не меньше высоты экрана */
+    
+    margin: 0;
+    padding: 30px 20px;
+    color: #2c3e50;
+}
+header { position: relative; /* Для абсолютного позиционирования */ }
+
+body { background-color: linear-gradient(to bottom, #d4f0f5 0%, #ffffff 100%); /* Или любой другой оттенок */ }
+
+/* Делаем хедер "контекстом" */ header { position: relative; /* Ключевое свойство! */ 
+}
+.info-block0 { 
+    position: absolute; 
+    top: 20%; 
+     /* Центрирование по вертикали внутри хедера */ transform: translateY(-50%);
+      /* Корректировка смещения */  top: 200px; right: 430px;
+      
+       /* Прижимает блок к правому краю хедера */ /* Или используйте left: 0; для левого края */ padding: 15px; padding-bottom: 70px;
+       background-color: rgba(255, 255, 255, 0); 
+       border-radius: 8px; 
+       box-shadow: 0 4px 6px rgba(0,0,0,0.0);
+        z-index: 10; /* Чтобы он был над всем контентом */ 
+         max-width: 250px; max-height: 130px;
+        border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    .scrollable { height: 100px; /* Ограничиваем видимую высоту */ overflow-y: auto; /* Вертикальная прокрутка */ }
+    }
+    
+
+.scrollable { height: 200px; /* Ограничиваем видимую высоту */ overflow-y: auto; /* Вертикальная прокрутка */ }
+
+/* Контейнер отступает от краев, но не ломает высоту фона */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    
+}
+
+
+
+
+.vertical-panel { width: 250px; /* Фиксированная ширина боковой панели */ 
+    display: flex; 
+    flex-direction: column; /* Раскладывает блоки вертикально */ 
+    gap: 10px; 
+    background-color: #ebf4ff; 
+    padding: 10px; 
+    border-radius: 8px; } /* Отдельные информационные блоки внутри боковой панели */ 
+    .info-block { padding: 10px; border-bottom: 1px solid #dfe6ee; } 
+    .overlay-block { padding: 10px 0 0 10px; border-bottom: 1px solid #dfe6ee; }/* Адаптация под мобильные устройства */ 
+    @media (max-width: 768px) 
+    { .main-container { flex-direction: column; /* Меняем порядок: сначала боковая панель */ } 
+    .vertical-panel { width: auto; /* Растягиваем её во всю ширину экрана */ } }
+
+/* --- Стили аккордеона --- */
+.info-block {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    background-color: #fff;
+    border-left: 4px solid #00aeef;
+    margin-bottom: 20px;
+    order: 1;
+    
+}
+
+.info-block0 {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    background-color: #fff;
+    border-left: 4px solid #00aeef;
+    margin-bottom: 20px;
+    order: 1;
+    width: 270px;
+    margin-left: 425px;
+    overflow-y: auto;
+}
+
+.info-block2 {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    background-color: #fff;
+    border-left: 4px solid #ef0000;
+    margin-bottom: 20px;
+    order: 1;
+    margin-left: -10px;
+    
+}
+
+.info-block summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #0b3d66;
+    user-select: none;
+    border-bottom: 1px solid #edf3f6;
+}
+
+.info-block0 summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #0b3d66;
+    user-select: none;
+    border-bottom: 1px solid #edf3f6;
+    width: 250px;
+}
+
+.info-block2 summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #0b3d66;
+    user-select: none;
+    border-bottom: 1px solid #edf3f6;
+}
+
+/* Прячем стандартный треугольник браузера */
+.info-block summary::-webkit-details-marker { display: none; }
+.info-block summary::marker { display: none; }
+
+/* Своя стрелка */
+.info-block summary .chevron {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    color: #0b3d66;
+}
+
+/* Поворот при открытии */
+.info-block[open] summary .chevron {
+    transform: rotate(180deg);
+}
+
+.description {
+    padding: 16px 20px;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #34495e;
+    border-bottom: 1px dashed #e1e8ed;
+}
+
+.description1 {
+    line-height: 1.6;
+    font-size: 15px;
+    color: #34495e;
+    border-bottom: 1px dashed #e1e8ed;
+    margin-left: 100px;
+    margin-top: -40px;
+}
+
+.pdf-link a, .nested-blocks a {
+    text-decoration: none;
+    color: #0077b5;
+    font-size: 14px;
+    display: block;
+    padding: 12px 20px;
+    position: relative;
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+.pdf-link a::before, .nested-blocks a::before {
+    content: "📄";
+    margin-right: 8px;
+}
+
+.pdf-link a:hover, .nested-blocks a:hover {
+    background-color: #f7fcfe;
+    padding-left: 26px;
+    color: #005a84;
+}
+
+.nested-blocks details {
+    border-top: 1px solid #f0f4f7;
+    margin-top: 8px;
+}
+
+.nested-details summary {
+    font-weight: 600;
+    padding: 14px 20px 14px 35px;
+    font-size: 16px;
+    color: #0b3d66;
+}
+
+.doc-subtitle {
+    font-size: 17px; /* Чуть больше основного текста */
+    line-height: 1.4;
+    margin-bottom: 0.5em; /* Отступ до следующего параграфа */
+    
+    /* Варианты выделения: */
+    color: #34495e; /* Темно-серый цвет вместо черного (#000) — легче для глаз */
+    font-weight: 500; /* Полужирный, но не экстремальный */
+    
+    /* Можно добавить разделитель снизу для акцента: */
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 6px;
+}
+
+
+/* === 1. ОСНОВНОЙ КОНТЕЙНЕР ТЕКСТА (Ограничение ширины) === */
+/* Чтобы строки не были слишком длинными на больших экранах */
+.text-block-container {
+    max-width: 720px; /* Идеальная ширина для чтения (~80 символов) */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* === 2. САМ БЛОК С ФОНОМ И ВНУТРЕННИМИ ОТБЫВАМИ (Padding) === */
+.block-content {
+    padding: 24px; /* Воздух вокруг текста, чтобы он не прилипал к краям */
+    background-color: #fafbfc; /* Мягкий светло-серый фон вместо белого (#fff) */
+    border-radius: 10px; /* Скругление углов для современного вида */
+    
+    /* Защита от переполнения длинных слов (например, названий файлов): */
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+
+/* === 3. ОСНОВНОЙ ТЕКСТ (Абзацы) — Margin только снизу! === */
+.block-content p {
+    font-size: 16px;
+    line-height: 1.75; /* Высокий интервал для легкого чтения с экрана */
+    color: #333333; /* Не чисто черный, мягче для глаз */
+    
+    margin-top: 0; /* Убираем лишние отступы сверху */
+    margin-bottom: 1.2em; /* Отступ до следующего абзаца или заголовка */
+}
+
+/* === 4. ВНУТРЕННИЕ ЗАГОЛОВКИ (Подзаголовки внутри блока) === */
+.block-content h4 {
+    font-size: 1.125rem; /* Примерно 18px */
+    line-height: 1.4;
+    color: #000000; /* Темнее основного текста для иерархии */
+    font-weight: 500;
+    
+    margin-top: 1.5em; /* Отделяем от предыдущего контента */
+    margin-bottom: 0.75em; /* Близко к своему тексту */
+    
+    /* Опционально: тонкая линия-подчеркивание для акцента */
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 6px;
+}
+
+/* === 5. СПИСКИ ДОКУМЕНТОВ (UL / OL) === */
+.block-content ul,
+.block-content ol {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    
+    margin-top: 0; /* Список должен "прилипать" к своему подзаголовку */
+    margin-bottom: 1.5em;
+    padding-left: 25px; /* Стандартный отступ для маркеров */
+}
+
+/* Если пункты списка сами являются блоками с фоном (как карточки документов) */
+.block-content li {
+    margin-bottom: 1em;
+    padding: 12px 16px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* === 6. АДАПТИВНОСТЬ (Для мобильных телефонов) === */
+@media (max-width: 768px) { 
+     .info-block { 
+        position: static;  
+        margin-top: 20px;  } }
+
+
+@media (min-width: 768px) { 
+     .info-block { 
+        position: static;  
+        margin-top: 20px;  } }
+
+@media (max-width: 768px) { 
+     .info-block0 { 
+    margin-top: 20px;
+    display: block;  } }
+
+
+
+
+
+/* Базовые стили для плавной анимации */
+.highlightable {
+    transition: background-color 0.8s ease-out, transform 0.5s ease-out;
+}
+
+/* Стиль в момент активации ссылки */
+#top-section:target {
+    /* 1. Меняем фон или обводку */
+    background-color: rgba(255, 0, 0, 0.2); /* Светло-желтый, как маркер-выделитель */
+    border-left: 5px solid #ec1313;
+
+    
+    /* 3. Плавно увеличиваем масштаб блока (эффект "всплытия") */
+    transform: scale(1.02);
+    
+    /* 4. Чтобы анимация не ломала верстку соседних элементов 
+       (из-за масштаба контент может "подпрыгнуть"), используем отступ */
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+#top-section1:target {
+    /* 1. Меняем фон или обводку */
+    background-color: rgba(255, 0, 0, 0.2); /* Светло-желтый, как маркер-выделитель */
+    border-left: 5px solid #ec1313;
+
+    
+    /* 3. Плавно увеличиваем масштаб блока (эффект "всплытия") */
+    transform: scale(1.02);
+    
+    /* 4. Чтобы анимация не ломала верстку соседних элементов 
+       (из-за масштаба контент может "подпрыгнуть"), используем отступ */
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) { 
+    .info-block0 { /* Убираем абсолютное позиционирование */ 
+        position: static ;  
+        text-align: center; /* Центрируем содержимое внутри него */ 
+        margin-top: 3rem; 
+        margin-bottom: 6rem; 
+        margin-left: 0; 
+        width: 250px; 
+        top: 30px; 
+        transform: translateY(50%) } }
+
+img { 
+    max-width: 100%; /* Картинка не может стать шире своего родителя */ height: auto; /* Сохраняет пропорции при изменении ширины */ display: block; /* Убирает небольшое пустое пространство снизу картинки */ }
+
+/* Ваши стили должны идти ПОСЛЕ подключения plyr.css */
+.plyr {
+    /* Основные цвета */
+    --plyr-color-main: #45587a; /* Цвет главного ползунка, кнопки Play и прогресса */
+    
+    /* Цвета при наведении */
+    --plyr-color-main-hover: #45587a; 
+
+    /* Цвет иконок (белый/черный) */
+    --plyr-control-icon-color: #ffffff;
+
+    /* Цвет иконок при наведении */
+    --plyr-control-icon-color-hover: #ffffff;
+
+    /* Цвет текста (время, меню) */
+    --plyr-color-text: #f0f0f0;
+
+    /* Фон самого плеера */
+    --plyr-video-background: #121212;
+    --plyr-audio-background: #1e1e1e;
+
+    /* Фон панели управления */
+    --plyr-control-background: rgba(0, 0, 0, 0.7);
+
+    /* Радиус скругления */
+    --plyr-border-radius: 12px;
+
+    /* Шрифт (если библиотека его наследует) */
+    font-family: 'Roboto', sans-serif;
+}
