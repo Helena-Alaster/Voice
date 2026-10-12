@@ -413,15 +413,56 @@ img {
     display: inline-flex;
     align-items: center;
     padding-left: 90px; /* Отступ слева, чтобы текст не наехал на картинку */
-    min-height: 50px; /* Высота логотипа */
+    min-height: 80px; /* Высота логотипа */
     background: url('img/logo.png') no-repeat left center;
     background-size: 80px 80px; /* Размер логотипа */
     font-size: 24px;
     font-weight: bold;
-    color: #34495e;;
+    color: #141f2b;
     text-decoration: none;
 }
 
 .p4 {
     padding-left: 90px;
 }
+
+@media (max-width: 768px) {
+    .site-title-with-logo {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 40px; /* Отступ слева, чтобы текст не наехал на картинку */
+    min-height: 80px; /* Высота логотипа */
+    background: url('img/logo.png') no-repeat left center;
+    background-size: 30px 30px; /* Размер логотипа */
+    font-size: 16px;
+    font-weight: bold;
+    color: #141f2b;
+    text-decoration: none;
+}
+
+    .p4 {
+    padding-left: 40px;
+    .logo-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .site-title {
+        font-size: 20px;
+    }
+
+    /* Адаптивный SVG */
+    .logo-img {
+        width: 45px; /* Фиксированный размер для 768px */
+        height: 45px;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        width: 35px;
+        height: 35px;
+    }
+}}
