@@ -409,55 +409,19 @@ img {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Сброс стандартных отступов браузера для шапки */
-.site-header {
-    padding: 15px 20px;
-    background: #FFFFFF; /* Фон шапки */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Контейнер для логотипа и названия */
-.logo-container {
-    display: flex; /* Включаем гибкую верстку */
-    align-items: center; /* Выравниваем по вертикали (чтобы текст не прыгал вверх-вниз) */
-    gap: 15px; /* Расстояние между логотипом и текстом */
-}
-
-/* Ссылка, внутри которой картинка, чтобы убрать синюю рамку (если она есть в старых браузерах) */
-.logo-link {
-    display: inline-block;
-    text-decoration: none;
-}
-
-/* Стили для самой картинки */
-.logo-img {
-    display: block;
-    max-width: 50px; /* Ограничиваем размер, чтобы логотип не стал огромным */
-    height: auto;
-}
-
-/* Если используете SVG-код */
-.logo-svg {
-    flex-shrink: 0; /* Запрещаем логотипу сжиматься */
-}
-
-/* Название сайта */
-.site-title {
+.site-title-with-logo {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 90px; /* Отступ слева, чтобы текст не наехал на картинку */
+    min-height: 50px; /* Высота логотипа */
+    background: url('img/logo.png') no-repeat left center;
+    background-size: 80px 80px; /* Размер логотипа */
     font-size: 24px;
     font-weight: bold;
-    color: #000000;
+    color: #000;
     text-decoration: none;
-    font-family: Arial, sans-serif;
 }
 
-/* Адаптивность: на узких экранах (например, мобильных) ставим элементы друг под друга */
-@media (max-width: 480px) {
-    .logo-container {
-        flex-direction: column; /* Элементы встают в колонку */
-        align-items: flex-start; /* Прижимаем к левому краю */
-        gap: 5px;
-    }
-    .site-title {
-        font-size: 20px;
-    }
+.p4 {
+    padding-left: 90px;
 }
