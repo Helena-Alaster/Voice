@@ -5,8 +5,7 @@
     html {
     /* Заставляет html занимать весь экран */
     height: 100%; 
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 33%, rgba(0, 57, 166, 0.3) 33%, rgba(0, 57, 166, 0.3) 66%, rgba(213, 43, 30, 0.3) 66%, rgba(213, 43, 30, 0.3) 100% );
-    background-repeat: no-repeat;
+    
     
 }
 
@@ -15,7 +14,8 @@ body {
     
     /* Растягиваем градиент на всю видимую область (Viewport) */
     min-height: 100vh; /* Ключевое свойство: блок body будет не меньше высоты экрана */
-    
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 33%, rgba(0, 57, 166, 0.3) 33%, rgba(0, 57, 166, 0.3) 66%, rgba(213, 43, 30, 0.3) 66%, rgba(213, 43, 30, 0.3) 100% );
+    background-repeat: no-repeat;
     margin: 0;
     padding: 30px 20px;
     color: #2c3e50;
