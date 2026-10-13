@@ -422,7 +422,7 @@ img {
     text-decoration: none;
 }
 
-p4 {
+.block-content p4 {
     padding-left: 120px;
 }
 
@@ -439,7 +439,7 @@ p4 {
     color: #141f2b;
     text-decoration: none;
 }
-    p4 {
+.block-content p4 {
     padding-left: 75px;
     font-size: 12px;
 }
