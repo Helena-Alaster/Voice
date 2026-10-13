@@ -412,10 +412,10 @@ img {
 .site-title-with-logo {
     display: inline-flex;
     align-items: center;
-    padding-left: 90px; /* Отступ слева, чтобы текст не наехал на картинку */
-    min-height: 80px; /* Высота логотипа */
+    padding-left: 120px; /* Отступ слева, чтобы текст не наехал на картинку */
+    min-height: 120px; /* Высота логотипа */
     background: url('img/logo.png') no-repeat left center;
-    background-size: 80px 80px; /* Размер логотипа */
+    background-size: 100px 100px; /* Размер логотипа */
     font-size: 24px;
     font-weight: bold;
     color: #141f2b;
@@ -423,7 +423,7 @@ img {
 }
 
 .p4 {
-    padding-left: 90px;
+    padding-left: 120px;
 }
 
 @media (max-width: 768px) {
